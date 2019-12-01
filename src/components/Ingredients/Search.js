@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import Card from "../UI/Card";
 import "./Search.css";
@@ -28,6 +28,7 @@ const Search = React.memo(props => {
         onLoadIngredients(loadedIngredients);
       });
   }, [enteredFilter, onLoadIngredients]);
+
   return (
     <section className="search">
       <Card>

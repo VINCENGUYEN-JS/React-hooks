@@ -6,21 +6,21 @@ import Search from "./Search";
 function Ingredients() {
   const [ingredients, setIngredients] = useState([]);
 
-  useEffect(() => {
-    fetch("https://react-hooks-update-67ab9.firebaseio.com/ingredients.json")
-      .then(res => res.json())
-      .then(responseData => {
-        const loadedIngredients = [];
-        for (let key in responseData) {
-          loadedIngredients.push({
-            id: key,
-            tittle: responseData[key].tittle,
-            amount: responseData[key].amount
-          });
-        }
-        setIngredients(loadedIngredients);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://react-hooks-update-67ab9.firebaseio.com/ingredients.json")
+  //     .then(res => res.json())
+  //     .then(responseData => {
+  //       const loadedIngredients = [];
+  //       for (let key in responseData) {
+  //         loadedIngredients.push({
+  //           id: key,
+  //           tittle: responseData[key].tittle,
+  //           amount: responseData[key].amount
+  //         });
+  //       }
+  //       setIngredients(loadedIngredients);
+  //     });
+  // }, []);
 
   const filteredIngredientsHandlers = filterIngredients => {
     setIngredients(filterIngredients);
